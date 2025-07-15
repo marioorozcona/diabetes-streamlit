@@ -16,8 +16,8 @@ def load_model():
     return joblib.load("modelo_diabetes.pkl")
 
 @st.cache_resource
-def load_explainer(model):
-    return shap.TreeExplainer(model)
+def load_explainer(_model):
+    return shap.TreeExplainer(_model)
 
 model = load_model()
 explainer = load_explainer(model)
